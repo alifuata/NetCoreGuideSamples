@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+<h2>Employee view (Regular view)</h2>
+<br />
+<h2>table from view component</h2>
+@await Component.InvokeAsync("EmployeeViewComponent")
+
+<br />
+<h2>table from view component with parameter</h2>
+@await Component.InvokeAsync("EmployeeIdViewComponent",2)
