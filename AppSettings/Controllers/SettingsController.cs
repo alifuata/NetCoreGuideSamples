@@ -30,6 +30,7 @@ namespace AppSettings.Controllers
             var tr = _configuration.GetSection("Person");
             //get metodu ile de modelle eşleştirilerek de alınabilir
             var fr = _configuration.GetSection("Person").Get(typeof(Person));
+            var cr = _configuration.GetSection("Person").Get<Person>();
             return Ok(vr);
         }
     }

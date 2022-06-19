@@ -1,3 +1,4 @@
+using AppSettings.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +26,8 @@ namespace AppSettings
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //Options Pattern ile ayarlarý IOC container içine alma
+            services.Configure<Person>(Configuration.GetSection("Person"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
